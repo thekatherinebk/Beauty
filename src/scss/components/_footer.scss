@@ -1,0 +1,125 @@
+body{
+  background-color: #000;
+}
+.footer {
+  height: 400px;
+  background: linear-gradient(to bottom, #000, #eee 85%, #000 100%);
+
+  &__img{
+    width: 30px;
+    height: 40px;
+    background-color: yellow;
+    box-shadow: 0 1px 5px 5px rgba(yellow, .7);
+    border-radius: 20px;
+    position: absolute;
+    z-index: 10;
+  }
+  &__img_l{
+    top: 70px;
+    left: -247px;
+  }
+
+  &__img_r{
+    top: 0;
+    left: 110px;
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    max-width: 1520px;
+    margin: 0 auto;
+    height: 300px;
+    padding: 0 20px;
+  }
+  &__left{
+    margin: 0 60px 0 0;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &__left-item {
+    position: relative;
+    width: 100%;
+    background-color: black;
+  }
+  &__left-text{
+    color: #fff;
+    z-index: 10;
+  }
+  &__left-num {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: #000000;
+    font-size: 48px;
+    line-height: 0.8;
+    color: rgba(yellow, 0.5);
+    z-index: 1;
+  }
+
+  &__center {
+    width: 700px;
+    background-color: blue;
+    height: 300px;
+  }
+
+  @include m(1200) {
+    &__wrap{
+      flex-direction: column-reverse;
+      align-items: center;
+      max-width: 900px;
+    }
+    &__left{
+      width: 100%;
+      flex-direction: row;
+      margin: 0;
+    }
+
+    &__left-item {
+      width: calc(100%/3);
+      min-width: 200px;
+    }
+
+    &__center {
+      width: 400px;
+    }
+  }
+
+
+}
+
+.form{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__item{
+    width: 40%;
+    height: 60px;
+    padding: 10px 15px;
+    &::placeholder{
+      font-size: 22px;
+      color: darkblue;
+    }
+  }
+  &__item_check{
+    width: 50%;
+    display: flex;
+    padding: 20px;
+  }
+  &__btn{
+    width: 150px;
+    background-color: deepskyblue;
+    margin: 0 auto;
+    height: 70px;
+    padding: 10px 15px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+}

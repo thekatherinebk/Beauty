@@ -1,0 +1,18 @@
+.callback {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__phone {
+    margin-right: get-rem(40px);
+
+  }
+}
+
+.callback-btn {
+  border-radius: $br;
+  border: 2px solid $accent;
+  padding: 13px 27px;
+  line-height: 1.11;
+}
+

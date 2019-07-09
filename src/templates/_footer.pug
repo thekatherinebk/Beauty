@@ -1,0 +1,35 @@
+//linda-app
+//	linda-header.header
+//	betman-section.terms
+//	linda-footer.footer
+//
+
+.footer
+
+	.footer__wrap
+		.footer__img.footer__img_l
+		.footer__img.footer__img_r
+		.footer__left
+			.footer__left-item
+				p.footer__left-text Lorem ipsum dolor sit amet, conse adipisicing elit. Dolore, molestiae.
+				.footer__left-num 1
+			.footer__left-item
+				p.footer__left-text Lorem ipsum dolor sit amet, cons dipisicing elit. Ab, eum.
+				.footer__left-num 2
+			.footer__left-item
+				p.footer__left-text Lorem ipsum dolor sit amet, con sec tetur adipi sicing elit. Officia, sit!
+				.footer__left-num 3
+
+
+		.footer__center
+			form.form(action="#" method="post")
+				input(type="text", name="name", placeholder="name", required).form__item
+				input(type="text", name="lastname", placeholder="Last name", required).form__item
+				input(type="text", name="city", placeholder="City", required).form__item
+				input(type="text", name="postcode", placeholder="Postcode", required).form__item
+				label(for="#radio-male") Male
+				input(type="radio", name="sex", id="radio-male").form__check
+				label(for="#radio-female") Female
+				input(type="radio", name="sex", id="radio-female" checked).form__check
+				input(type="password", name="password", placeholder="Password", required).form__item
+				button(type="submit").form__btn Submit

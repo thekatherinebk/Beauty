@@ -1,0 +1,17 @@
+.main-nav{
+  width: 100%;
+}
+.main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__item{
+    display: flex;
+    align-items: center;
+  }
+
+  &__link{
+    padding: 30px 20px;
+  }
+}

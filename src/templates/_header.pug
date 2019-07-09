@@ -1,0 +1,57 @@
+- const faqMenu = ['Доставка', 'Оплата', 'Отзывы', 'Вопрос-ответ', 'Контакты'];
+- const mainMenu = ['Парикмахерская', 'Барбершоп', 'Маникюр', 'Педикюр', 'Массаж', 'Мебель'];
+
+mixin navLi( className, array)
+	for content in array
+		li(class = `${className}__item`)
+			if (content === array[1])
+				a(class = `${className}__link is-active`)= content
+			else
+				a(class = `${className}__link`)=content
+
+header.header
+	.header__top
+		.header__container
+			.header__top-item
+				nav.faq-nav
+					ul.faq-nav__menu
+						+navLi('faq-nav', faqMenu)
+
+	.header__mid
+		.header__container
+			.header__mid-item
+				.logo
+					svg.logo__svg(xlink:href="#logo")
+					.logo__title BEAUTY
+
+			.header__mid-item
+				form.search-form(action="#" method="post")
+					input(type="text" )#search-field
+
+			.header__mid-item
+				.callback
+					.callback__phone
+						a.callback__phone-link(href='tel:88121234567') 8 (812) 123-45-67
+					button.callback-btn Обратный звонок
+
+	.header__btm
+		.header__container
+			nav.main-nav
+				ul.main-menu
+					+navLi('main-menu', mainMenu)
+
+	.header__banner
+		.header__banner__container.container
+			.header__banner-item
+				.header__banner-title Супер кресло
+				.header__banner-text Текст акции всегда отражает суть, а не просто болтовню, поэтому внимательнее
+				button.header__banner-btn Подробнее
+			.header__banner-item
+				.progress
+					.progress__bar
+						.progress__bar-left
+						.progress__bar-right
+
+
+
+

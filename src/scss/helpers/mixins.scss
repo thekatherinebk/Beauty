@@ -1,0 +1,20 @@
+@mixin transitionAll() {
+  transition: all .4s ease-in-out;
+}
+
+@function get-vw($target) {
+  $vw-context: (1280 * .01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+@function get-rem($target) {
+  @return ($target / 12px) * 1rem;
+}
+@mixin m($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content;
+  }
+}
+//=min($width) {
+//  @media only screen and (min-width: $width+ "px");
+//    @content;
+//}

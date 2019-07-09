@@ -1,0 +1,30 @@
+extends layouts/_layout
+
+block variables
+	- let pageTitle = 'Breeze'
+
+block header
+	include templates/_header
+
+block content
+	main.content
+
+block footer
+	include templates/_footer
+
+//-
+	linda-app
+		linda-header.header
+
+		betman-item.terms
+		linda-footer.footer
+
+	.header
+		background: #eb01a5;
+		background-image: url("IMAGE_URL"); /* fallback */
+		background-image: url("IMAGE_URL"), linear-gradient(to bottom, #000, #eee 80%, #000 100%);
+	body
+		bgc: #000
+	.container
+		max-width: 1300px
+		margin: 0 auto

@@ -1,0 +1,21 @@
+.faq-nav{
+  display: flex;
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    margin: 0 15px;
+  }
+  &__link{
+    line-height: 1.143;
+    padding: 17px 0 16px;
+    transition: all .3s ease;
+
+    &:hover{
+      color: $accent;
+      text-shadow: 2px $accent;
+    }
+  }
+}
